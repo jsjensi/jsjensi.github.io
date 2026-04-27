@@ -35,7 +35,10 @@ body{
     margin:0 auto;
     padding:0 20px 40px;
 }
-h2{margin-top:28px}
+h2{
+    margin-top:28px;
+    margin-bottom:12px;
+}
 .card{
     background:var(--card);
     border:1px solid #1f2937;
@@ -43,6 +46,55 @@ h2{margin-top:28px}
     padding:18px;
 }
 .card a{color:#c4b5fd}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:14px;
+}
+
+.stack-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.chip{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:999px;
+    background:#1f2937;
+    border:1px solid #374151;
+    color:#ddd6fe;
+    font-size:14px;
+}
+
+.post-list{
+    margin:0;
+    padding-left:18px;
+}
+
+.post-list li{
+    margin:8px 0;
+}
+
+.post-list a{
+    color:#d1d5db;
+}
+
+.post-list a:hover,
+.card a:hover{
+    color:#c4b5fd;
+}
+
+@media (max-width:600px){
+    .hero h1{font-size:34px;}
+    .links a{
+        display:inline-block;
+        margin:6px 4px;
+    }
+}
+
 footer{
     text-align:center;
     color:var(--muted);
